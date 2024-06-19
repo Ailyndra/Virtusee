@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.content.res.ColorStateList;
+import android.provider.MediaStore; // tambahan untuk open camera 
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.graphics.Bitmap;
@@ -377,21 +378,49 @@ public class Form extends AppCompatActivity implements SearchView.OnQueryTextLis
 
     }
 
+
     @Click(R.id.fabForm)
     void placesCin() {
-        int status = 0;
-        String msg;
-
-        if (placeStatus == 1) {
-            status = 2;
-            msg = "Check out from this place?";
-        } else {
-            status = 1;
-            msg = "Check in to this place?";
+        // Membuka aplikasi kamera
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (cameraIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
         }
-
-        UtilHelper.Alert(this, this, msg, "", android.R.drawable.ic_dialog_alert, status);
     }
+
+    // menambahkan variabel ini di luar metode untuk kode permintaan kamera
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+
+    // Override metode ini untuk menangani hasil dari kamera
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            // Ambil gambar dari Intent
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            // melakukan sesuatu dengan bitmap, misalnya menampilkannya di ImageView
+            ImageView imageView = findViewById(R.id.yourImageViewId);
+            imageView.setImageBitmap(imageBitmap);
+        }
+    }
+
+
+    // @Click(R.id.fabForm)
+    // void placesCin() {
+    //     int status = 0;
+    //     String msg;
+
+    //     if (placeStatus == 1) {
+    //         status = 2;
+    //         msg = "Check out from this place?";
+    //     } else {
+    //         status = 1;
+    //         msg = "Check in to this place?";
+    //     }
+
+    //     UtilHelper.Alert(this, this, msg, "", android.R.drawable.ic_dialog_alert, status);
+    // }
 
     @Click(R.id.fabDirection)
     void direction() {
