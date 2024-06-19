@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.virtusee.core"
+    android:versionCode="82">
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="google.navigation" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@drawable/ab_logo"
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity">
+        <!--
+         Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notiflogo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/vsdarkblue" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.virtusee.core.provider.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="com.virtusee.contentprovider.MasterContentProvider_"
+            android:authorities="com.virtusee.core.provider.master"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.FormContentProvider_"
+            android:authorities="com.virtusee.core.provider.form"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.StoreContentProvider_"
+            android:authorities="com.virtusee.core.provider.store"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.InboxContentProvider_"
+            android:authorities="com.virtusee.core.provider.inbox"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.AnswerContentProvider_"
+            android:authorities="com.virtusee.core.provider.answer"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.HistoryContentProvider_"
+            android:authorities="com.virtusee.core.provider.history"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.PhotoContentProvider_"
+            android:authorities="com.virtusee.core.provider.photo"
+            android:exported="false" />
+        <provider
+            android:name="com.virtusee.contentprovider.AudioContentProvider_"
+            android:authorities="com.virtusee.core.provider.audio"
+            android:exported="false" />
+
+        <service android:name="com.virtusee.geofence.GeofenceTransitionsIntentService" />
+        <service
+            android:name="com.virtusee.services.SyncServ"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.virtusee.services.CleanerServ"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.virtusee.firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".BarcodeScanner"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Drawer_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormHist_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormDet_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Form_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Photo_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TTD_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" /> <!-- android:noHistory="true" -->
+        <activity
+            android:name=".Login_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Splash_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Camera_"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <receiver
+            android:name="com.virtusee.receiver.WdayReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.virtusee.receiver.WdayCoutReceiver_"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.virtusee.receiver.WdayExtendReceiver_"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

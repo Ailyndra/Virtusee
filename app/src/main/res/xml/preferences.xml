@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory>
+         
+        <EditTextPreference android:key="restserver" android:defaultValue="http://ydsf.exploremybos.com/rest/" android:title="REST Server"/>
+            
+        <EditTextPreference android:key="restusername" android:defaultValue="hehe" android:title="REST Username"/>
+
+            
+    </PreferenceCategory>
+
+    
+
+</PreferenceScreen>

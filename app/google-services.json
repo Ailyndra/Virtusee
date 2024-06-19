@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "315542388948",
+    "firebase_url": "https://virtusee-ec0a0.firebaseio.com",
+    "project_id": "virtusee-ec0a0",
+    "storage_bucket": "virtusee-ec0a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315542388948:android:890c0deb5fc2a1cb",
+        "android_client_info": {
+          "package_name": "com.virtusee.core"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315542388948-2tm8ajpeevdii5j2v8em9rki9nmfbtmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virtusee.core",
+            "certificate_hash": "8a00f4b3a530401239604468adf8f2b78e26fcd8"
+          }
+        },
+        {
+          "client_id": "315542388948-i8nq7r237s3872pips0qthgtamvqpqc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmAn_5YS-K8nhuo2y_vGz_dXe5KQISpD4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315542388948-i8nq7r237s3872pips0qthgtamvqpqc5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

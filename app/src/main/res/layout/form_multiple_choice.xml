@@ -1,0 +1,14 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditText
+        android:id="@+id/formMultipleChoiceItem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ddown"
+        android:focusable="false"
+        android:gravity="bottom">
+    </EditText>
+</merge>

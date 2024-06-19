@@ -1,0 +1,12 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Spinner
+        android:id="@+id/formComboItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="17dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="0dp"/>
+
+</merge>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Virtusee</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="hello">Hello World, Todo!</string>
+    <string name="action_save">Save</string>
+    <string name="action_update">Update</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="no_todos">Currently there are no Todo items maintained</string>
+    <string name="menu_insert">Add Item</string>
+    <string name="menu_delete">Delete Todo</string>
+    <string name="todo_summary">Summary</string>
+    <string name="todo_description">Delete Todo</string>
+    <string name="todo_edit_summary">Summary</string>
+    <string name="todo_edit_description">Description</string>
+    <string name="todo_edit_confirm">Confirm</string>
+
+
+    <string name="title_activity_login">Login in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_domain"><i>Domain</i></string>
+    <string name="prompt_username"><i>Username</i></string>
+    <string name="prompt_password"><i>Password</i></string>
+    <string name="action_sign_in_register"><b>Log In</b></string>
+    <string name="action_sign_in_short">Log In</string>
+    <string name="action_forgot_password">Recover lost password</string>
+    <string name="login_progress_signing_in">Signing in&#8230;</string>
+    <string name="error_invalid_user">This Username is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="powered_by">powered by Virtusee &#174;</string>
+    <string name="search">Search</string>
+
+    <string name="warn_empty_location">Berikut beberapa cara untuk mengatasi hal ini:\n
+    1. Matikan lokasi gps lalu hidupkan kembali\n
+    2. Cek konektivitas pada jaringan\n
+    3. Cek apakah lokasi anda mati\n
+    4. Tutup lalu buka kembali form\n\n
+    Jika cara diatas masih tidak bisa, dimohon untuk menghubungi Administrator</string>
+    <string name="default_notification_channel_id">inbox_1</string>
+
+</resources>

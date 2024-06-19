@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+		xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/abs_form_print"
+		app:showAsAction="always|withText"
+		android:visible="false"
+		android:title="Print"
+		android:titleCondensed="Print">
+	</item>
+
+   	<item
+		android:id="@+id/abs_form_save"
+		app:showAsAction="always|withText"
+		android:title="@string/action_save"
+		android:titleCondensed="@string/action_save">
+	</item>
+   	
+</menu>

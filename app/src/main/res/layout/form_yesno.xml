@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RadioGroup
+        android:id="@+id/formYesNoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <!--android:background="@drawable/yesno_state"-->
+
+        <RadioButton
+            android:id="@+id/formYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:tag="0"
+            android:text="Yes"
+            android:textColor="@color/DarkGray"/>
+
+        <RadioButton
+            android:id="@+id/formNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_weight="1"
+            android:tag="1"
+            android:text="No"
+            android:textColor="@color/DarkGray"/>
+
+
+
+        <ImageView
+            android:id="@+id/imgError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:tint="@android:color/holo_red_light"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_error_locked"/>
+    </RadioGroup>
+
+
+</merge>

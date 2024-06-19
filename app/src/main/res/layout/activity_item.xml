@@ -1,0 +1,160 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/activityItemGroup"
+              style="@style/Base.TextAppearance.AppCompat.Body1"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="20dp"
+              android:background="@color/VSGray"
+              android:orientation="vertical"
+              android:padding="14dp"
+              android:text="Now"
+              android:textColor="@color/Black80"
+              android:textStyle="bold"
+              android:visibility="visible"/>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activityCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="4dp">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="14dp"
+    android:paddingTop="14dp"
+    android:paddingRight="14dp"
+    android:paddingBottom="14dp">
+
+    <ImageView
+        android:id="@+id/activityIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="8dp"
+        android:tint="@color/Orange"
+        card_view:srcCompat="@drawable/ic_assignment"/>
+
+    <TextView
+        android:id="@+id/activityTitle"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/activityIcon"
+        android:text="You saved"/>
+
+    <TextView
+        android:id="@+id/activityForm"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityTitle"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/activityIcon"
+        android:text="form name"
+        android:textAllCaps="true"
+        android:textColor="@color/vsblue"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/activityAt"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/activityForm"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/activityForm"
+        android:text="at"/>
+
+    <TextView
+        android:id="@+id/activityPlace"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityForm"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/activityIcon"
+        android:text="Time to come clean: I was late to the game on RecyclerView. Why late! I have only myself to blame"
+        android:textColor="@color/DimGray"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/activityWhen"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="12:00"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <ImageView
+        android:id="@+id/activityDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityPlace"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        card_view:srcCompat="@android:drawable/divider_horizontal_bright"/>
+
+    <LinearLayout
+        android:id="@+id/activityImgWrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityDiv"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tint="@color/LimeGreen"
+            card_view:srcCompat="@drawable/ic_photo_16dp"/>
+
+        <TextView
+            android:id="@+id/activityImgSync"
+            style="@style/Base.TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="@color/LimeGreen"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activitySync"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/activityDiv"
+        android:layout_marginTop="3dp"
+        android:text="Synced"
+        android:textColor="@color/LimeGreen"
+        android:textSize="5pt"/>
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+
+    <style name="LoginTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+ <!--<style name="LoginTheme" parent="AppBaseTheme"> -->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+	    <item name="android:windowBackground">@color/bglogin</item>
+	    <item name="android:colorBackground">@color/bglogin</item>
+    </style>
+    
+    
+    <style name="LoginBtn">
+        <item name="android:colorBackground">@color/btnlogin</item>
+        
+    </style>
+
+    <style name="LoginTextBox">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">#ffffff</item>
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
+    </style>
+</resources>

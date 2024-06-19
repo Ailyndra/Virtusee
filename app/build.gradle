@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+def AAVersion = '4.8.0'
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        // replace with the current version of the Android plugin
+        classpath 'com.android.tools.build:gradle:4.2.2'
+    }
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+
+android {
+    compileSdkVersion 33
+
+    def versionMajor = 7
+    def versionMinor = 2
+    def versionPatch = 6
+
+//    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.virtusee.core"
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+    }
+//    productFlavors {
+//        ori {
+//            applicationId = "com.virtusee.core"
+//        }
+//        qs {
+//            applicationId = "com.virtusee.core.qs"
+//        }
+//        md {
+//            applicationId = "com.virtusee.core.md"
+//        }
+//    }
+    buildTypes {
+        debug {
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles 'proguard-rules.pro'
+        }
+//        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+    }
+    packagingOptions {
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+    }
+    productFlavors {
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-basement:17.2.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.google.firebase:firebase-core:17.4.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.3.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

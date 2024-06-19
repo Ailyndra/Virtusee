@@ -1,0 +1,31 @@
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/formMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="Click Here to take record sound"
+            android:src="@drawable/mic"
+            app:tint="@color/vsblue" />
+
+        <ImageView
+            android:id="@+id/formPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="Click Here to take play sound"
+            android:src="@drawable/play"
+            app:tint="@color/vsblue" />
+
+    </LinearLayout>
+
+</merge>

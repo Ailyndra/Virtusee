@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingTop="14dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="14dp">
+
+
+<TextView
+android:id="@+id/storeTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="title"
+android:textSize="16dp"
+android:textColor="@color/vsblue"
+android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/storeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/storeTitle"
+        android:layout_marginTop="5dp"
+        android:text="desc"
+        android:textSize="12dp" />
+
+
+    <ImageView
+        android:id="@+id/storeFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:tint="@color/Red"
+        app:srcCompat="@drawable/ic_error_locked"/>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingTop="14dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="14dp">
+
+    <TextView
+        android:id="@+id/historyForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/historyPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/historyForm"
+        android:text="desc"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Medium Text"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/historyWhen"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/historyWhen"
+        android:text="Small Text"
+        android:id="@+id/historySync"
+        android:layout_alignRight="@+id/historyWhen"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

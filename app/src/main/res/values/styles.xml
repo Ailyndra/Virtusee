@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <!-- Set AppCompat’s color theming attrs -->
+        <item name="android:windowBackground">@color/White</item>
+        <item name="colorPrimary">@color/vsblue</item>
+        <item name="colorPrimaryDark">@color/vsdarkblue</item>
+        <item name="android:dropDownListViewStyle">@style/TestSpinnerStyle</item>
+        <item name="colorAccent">@color/vsblue</item>
+        <item name="android:colorBackground">@color/White</item>
+
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="@android:style/Widget.DeviceDefault.Light.ActionBar.Solid.Inverse">
+
+        <item name="android:background">@color/vsblue</item>
+        <item name="android:icon">@drawable/ab_logo</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/vsblue</item>
+        <item name="icon">@drawable/ab_logo</item>
+
+    </style>
+
+    <style name="spinnerStyle"  parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:padding">17dp</item>
+    </style>
+
+    <style name="TestSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">#e0e0e0</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="fullpopup" parent="android:Theme.DeviceDefault.Light.Dialog" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/White</item>
+        <!--<item name="windowActionBarOverlay">true</item>-->
+        <item name="colorPrimary">@color/vsblue</item>
+        <item name="colorPrimaryDark">@color/vsdarkblue</item>
+    </style>
+
+    <style name="toolbartransparent" parent="android:Theme" >
+        <!--<item name="windowActionBarOverlay">true</item>-->
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="HidingToolbarTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/HidingToolbarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="HidingToolbarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/Gray</item>
+    </style>
+
+    <style name="CollapsingToolbarForm" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
+    </style>
+
+    <style name="TagButtonDefault" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@color/Gray</item>
+    </style>
+
+    <style name="Theme.AppTheme.Light.Dialog" parent="Theme.AppCompat.Light.Dialog"/>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textColor">#595959</item><!-- text size in menu-->
+        <item name="android:textStyle">bold</item><!-- text size in menu-->
+    </style>
+
+    <style name="WhiteProgress" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">#FFF</item>
+    </style>
+
+</resources>

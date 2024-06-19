@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="TAG_DATE_ID"/>
+    <item type="id" name="TAG_DATE_DD"/>
+    <item type="id" name="TAG_DATE_MM"/>
+    <item type="id" name="TAG_DATE_YY"/>
+</resources>
